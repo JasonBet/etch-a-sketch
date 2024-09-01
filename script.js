@@ -23,7 +23,7 @@ function gridGenerator(size) {
     }
 
     // Set container height and width according to grid size
-    let gridLength = size*40;
+    let gridLength = size*10;
     container.style.height = `${gridLength}px`;
     container.style.width = `${gridLength}px`;
     for (let i = 1; i <= size*size; i++) {
