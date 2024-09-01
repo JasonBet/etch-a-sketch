@@ -14,9 +14,8 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 704px;
-    width: 704px;
-    gap: 4px;
+    height: 640px;
+    width: 640px;
 }
 
 .gridItem {
