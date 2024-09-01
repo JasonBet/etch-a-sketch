@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 704px;
+    width: 704px;
+    gap: 4px;
+}
+
+.gridItem {
+    height: 40px;
+    width: 40px;
+    background-color: rebeccapurple;
+}
