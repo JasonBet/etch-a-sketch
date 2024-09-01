@@ -21,14 +21,13 @@ function gridGenerator(size) {
     while(container.firstChild){
         container.removeChild(container.firstChild);
     }
-
-    // Set container height and width according to grid size
-    let gridLength = size*10;
-    container.style.height = `${gridLength}px`;
-    container.style.width = `${gridLength}px`;
+    // Determine cell size based on number of cells needed
+    let cellSize = 600 / size;
     for (let i = 1; i <= size*size; i++) {
         let item = document.createElement('div');
         item.classList.add("gridItem");
+        item.style.height = `${cellSize}px`;
+        item.style.width = `${cellSize}px`;
         item.dataset.cell = i;
         container.appendChild(item);
     }
@@ -47,6 +46,8 @@ container.addEventListener('mouseover', (e) => {
 });
 
 button.addEventListener('click', (e) => {
-    let gridSize = prompt("Enter grid size:", 16);
+    let gridSize = prompt("Enter grid size (1-100):", 16);
+    if (gridSize > 100) gridSize = 100;
+    else if (gridSize < 1) gridSize = 1;
     gridGenerator(gridSize);
 });
